@@ -7,7 +7,7 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const key = "e1acfb28";
+    const key = "2ec6985e";
     fetch(`https://api.hgbrasil.com/finance?key=${key}`)
       .then(res => res.json())
       .then(res => {
