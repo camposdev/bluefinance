@@ -2,27 +2,32 @@
 
 exports[`Header component renders correctly 1`] = `
 <div
-  className="sc-ifAKCX dEQwgk"
+  className="sc-ifAKCX eOkYMq"
 >
   <div
-    className="sc-bdVaJa cwGBfq"
+    className="sc-bdVaJa GvrJR"
   >
     <div
       className="sc-bxivhb kkzDWN"
     >
       <h2
-        className="sc-bwzfXH eKKhvH"
+        className="sc-bwzfXH bEEfkL"
       >
         Blue
         <small>
           Finance
         </small>
       </h2>
-      <button
-        className="sc-htpNat hUDOwk"
+      <a
+        href="/login"
+        onClick={[Function]}
       >
-        Sair
-      </button>
+        <button
+          className="sc-htpNat eTUrZC"
+        >
+          Sair
+        </button>
+      </a>
     </div>
   </div>
 </div>

@@ -7,11 +7,13 @@ const Button = ({ children, ...props }) => <ButtonComponent {...props}>{children
 
 Button.propTypes = {
   children: PropTypes.any.isRequired,
-  light: PropTypes.bool
+  light: PropTypes.bool,
+  large: PropTypes.bool
 };
 
 Button.defautProps = {
-  light: false
+  light: false,
+  large: false
 };
 
 export default Button;
