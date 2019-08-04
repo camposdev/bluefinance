@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import DefaultButton from "../../components/Button";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ export const Input = styled.input`
     background-color: white;
     border-color: white;
     color: var(--dark);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
 
     &::placeholder,
     &::-webkit-input-placeholder {
@@ -53,28 +54,8 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
-  border: none;
-  padding: 10px 40px;
+export const Button = styled(DefaultButton)`
   width: 100%;
-  height: 4.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
-  border-radius: 2.4rem;
-  font-size: 1.4rem;
-  color: var(--primary);
-  cursor: pointer;
-  background: var(--gradient-light);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-  }
-  &:active {
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0.3);
-  }
 `;
 
 export const SeparateForm = styled.div`

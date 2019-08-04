@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders correctly 1`] = `
+<div
+  className="sc-ifAKCX dEQwgk"
+>
+  <div
+    className="sc-bdVaJa cwGBfq"
+  >
+    <div
+      className="sc-bxivhb kkzDWN"
+    >
+      <h2
+        className="sc-bwzfXH eKKhvH"
+      >
+        Blue
+        <small>
+          Finance
+        </small>
+      </h2>
+      <button
+        className="sc-htpNat hUDOwk"
+      >
+        Sair
+      </button>
+    </div>
+  </div>
+</div>
+`;

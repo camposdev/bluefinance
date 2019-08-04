@@ -28,13 +28,13 @@ const Login = () => {
 
   return (
     <Wrapper>
-      <Logo />
+      <Logo light />
 
       <Form>
         <Input type="email" placeholder="Seu e-mail" ref={firstFieldRef} value={email} onChange={e => setEmail(e.target.value)} />
         <Input type="password" placeholder="Senha" value={pass} onChange={e => setPass(e.target.value)} />
         {signup && <Input type="password" placeholder="Confirmar senha" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} />}
-        <Button type="submit" onClick={(e) => e.preventDefault()}>{labelButton}</Button>
+        <Button light type="submit" onClick={(e) => e.preventDefault()}>{labelButton}</Button>
         <SeparateForm>ou</SeparateForm>
         <Anchor href="#" onClick={() => setSignup(!signup)}>{labelLink}</Anchor>
       </Form>
