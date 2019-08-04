@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo component renders correctly 1`] = `
+<h2
+  className="sc-bdVaJa bOVyEw"
+>
+  Blue
+  <small>
+    Finance
+  </small>
+</h2>
+`;

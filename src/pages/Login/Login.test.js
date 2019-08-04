@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import App from "./App";
+import Login from "./Login";
 
-describe("App component", () => {
+describe("Login component", () => {
   it("renders correctly", () => {
-    const container = render(<App />);
+    const container = render(<Login />);
 
     expect(container).toBeTruthy();
   });
