@@ -6,10 +6,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
     "@fortawesome/free-solid-svg-icons": "^5.10.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "numeral": "^2.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "recharts": "^1.6.2",
     "styled-components": "^4.3.2"
   },
   "scripts": {

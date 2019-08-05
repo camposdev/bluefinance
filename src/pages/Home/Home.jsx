@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Header from "../../components/Header";
 import Container from "../../components/Container";
-import { Wrapper } from "./style";
+import { Wrapper, ListItems } from "./style";
+import Loading from '../../components/Loading';
+import Card from '../../components/Card/Card';
+import Title from '../../components/Title';
+import Featured from './Featured';
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const [featuredData, setFeaturedData] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const key = "2ec6985e";
-    
-    fetch(`https://api.hgbrasil.com/finance?key=${key}`)
+    const currencies = "USD-BRL,CAD-BRL,EUR-BRL,ARS-BRL,JPY-BRL,AUD-BRL,GBP-BRL,CHF-BRL,BTC-BRL,LTC-BRL,XRP-BRL,ETH-BRL";
+
+    fetch(`https://economia.awesomeapi.com.br/all/${currencies}`)
       .then(res => res.json())
       .then(res => {
-        console.log(res);
+        setData(Object.values(res));
+        setLoading(false);
+        setFeaturedData(Object.values(res)[0]);
       });
   }, []);
 
@@ -20,9 +28,19 @@ const Home = () => {
     <Wrapper>
       <Header />
 
+      <Featured data={featuredData} />
+
       <Container>
-        oi
+        <Title>Cotação das principais moedas</Title>
+
+        <ListItems>
+          {data.length > 0 && data.map((item, index) => (
+            <Card key={index} data={item} />
+          ))}
+        </ListItems>
       </Container>
+
+      {loading && <Loading />}
     </Wrapper>
   );
 }

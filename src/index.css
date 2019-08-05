@@ -4,6 +4,8 @@
   --secondary: #5700ff;
   --accent: #00d9ff;
   --dark: #30303b;
+  --danger: #ff6e6e;
+  --success: #6ef36e;
   --gradient-primary: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 50%, var(--accent) 100%);
   --gradient-light: linear-gradient(135deg, rgba(231,220,255,1) 0%, rgba(238,243,255,1) 50%, rgba(219,249,255,1) 100%);
 }
