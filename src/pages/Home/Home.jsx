@@ -8,6 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const key = "2ec6985e";
+    
     fetch(`https://api.hgbrasil.com/finance?key=${key}`)
       .then(res => res.json())
       .then(res => {
