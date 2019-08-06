@@ -10,7 +10,7 @@ const PercentComponent = styled.small`
 `;
 
 const Percent = ({value, ...props}) => {
-  const isNegative = value && value.charAt(0) === "-";
+  const isNegative = value && value < 0;
 
   return (
     <PercentComponent isNegative={isNegative} {...props}>{value}%</PercentComponent>

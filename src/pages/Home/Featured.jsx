@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { XAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import Container from '../../components/Container';
 import Title from "../../components/Title";
-import Percent from '../../components/Percent';
-import formatCurrency from '../../utils/formatCurrency';
-import { FeaturedWraper, GraphContent, Price, Info, Chart } from "./style";
+import numeral from 'numeral';
+import { FeaturedWraper, GraphContent, Price, Info, Chart, Percentage } from "./style";
 
 const Featured = ({ data }) => {
   const dataGraph = [
@@ -34,12 +33,12 @@ const Featured = ({ data }) => {
   return (
     <FeaturedWraper>
       <Container>
-        <Title>Cotação do {data.name}</Title>
+        <Title large>Cotação do {data.name}</Title>
         
         <GraphContent>
           <Info>
-            <Percent value={data.pctChange} />
-            <Price>{formatCurrency(data.ask)}</Price>
+            <Percentage value={data.variation} />
+            <Price>{numeral(data.buy || data.last).format('$0,0.00')}</Price>
           </Info>
 
           <Chart>
@@ -47,8 +46,12 @@ const Featured = ({ data }) => {
               <LineChart
                 data={dataGraph}
               >
-                <XAxis dataKey="name" tick={{fill: 'white', fontSize: 8 }} tickLine={false} axisLine={false} />
-                <Tooltip />
+                <XAxis dataKey="name" tick={{fill: 'transparent', fontSize: 8 }} tickLine={false} axisLine={false} />
+                <Tooltip
+                  contentStyle={{color: "var(--dark)"}}
+                  itemStyle={{color: "var(--primary)", fontWeight: "bold"}}
+                  cursor={{ stroke: 'transparent', strokeWidth: 0 }}
+                />
                 <Line type="monotone" dataKey="uv" stroke="#ffffff" fill="#ffffff" />
               </LineChart>
             </ResponsiveContainer>
