@@ -15,7 +15,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const key = "2ec6985e";
+    const key = "24da9940";
     fetch(`https://api.hgbrasil.com/finance?format=json-cors&key=${key}`)
       .then(res => res.json())
       .then(res => {
